@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import LiquidChrome from '../LiquidChrome';
 function Login({ onLogin }) {
   const [isSignup, setIsSignup] = useState(false);
   const [name, setName] = useState('');
@@ -44,7 +44,9 @@ function Login({ onLogin }) {
   };
 
   return (
+    
     <div style={styles.container}>
+      <LiquidChrome></LiquidChrome> 
       <form onSubmit={handleAuth} style={styles.box}>
         <h2>{isSignup ? 'Sign Up' : 'Login'}</h2>
 
@@ -108,7 +110,8 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    
+
     padding: '20px',
   },
   box: {
@@ -119,6 +122,9 @@ const styles = {
     textAlign: 'center',
     width: '100%',
     maxWidth: '400px',
+     background: 'rgba(0, 123, 255, 0.3)',
+    backdropFilter: 'blur(10px)',
+    WebkitBackdropFilter: 'blur(10px)',
   },
   input: {
     width: '100%',
@@ -131,7 +137,7 @@ const styles = {
   button: {
     width: '100%',
     padding: '10px',
-    backgroundColor: '#6200ea',
+    backgroundColor: 'black',
     color: '#fff',
     border: 'none',
     borderRadius: '6px',
@@ -145,7 +151,8 @@ const styles = {
   linkButton: {
     background: 'none',
     border: 'none',
-    color: '#6200ea',
+    color: 'black',
+    textwidth:"200px",
     cursor: 'pointer',
     textDecoration: 'underline',
     fontSize: '14px',
